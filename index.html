@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aswathy &amp; Ananthu — Engagement</title>
+<meta name="description" content="Aswathy & Ananthu — Engagement ceremony on 13th September 2026, 11:00 AM at Thuruthi Temple Hall, Maradu.">
+<meta property="og:title" content="Aswathy &amp; Ananthu — Engagement">
+<meta property="og:description" content="13th September 2026 · 11:00 AM · Thuruthi Temple Hall, Maradu">
+<meta property="og:image" content="assets/welcome.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#7B1E4B">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --plum:#6D1A45;
+  --plum-deep:#4E1030;
+  --rose:#C2537E;
+  --gold:#B8893F;
+  --gold-soft:#D9B778;
+  --cream:#FCF6EE;
+  --cream-2:#F6E9DC;
+  --ink:#4A3A3F;
+  --ink-soft:#7C6A6F;
+  --shadow:0 18px 50px rgba(109,26,69,.13);
+  --max:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Montserrat',system-ui,-apple-system,'Segoe UI',sans-serif;
+  color:var(--ink);
+  background:var(--cream);
+  line-height:1.7;
+  overflow-x:hidden;
+  position:relative;
+  -webkit-font-smoothing:antialiased;
+}
+/* soft wash behind everything (own layer - no background-attachment:fixed,
+   which janks on iOS and breaks compositing) */
+body::before{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(1200px 700px at 90% -5%, #F3DDE9 0%, transparent 60%),
+    radial-gradient(900px 600px at -10% 20%, #EADCF0 0%, transparent 55%),
+    var(--cream);
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+/* ---------- shared bits ---------- */
+.wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:22px}
+.script{font-family:'Great Vibes',cursive;font-weight:400;line-height:1.05}
+.serif{font-family:'Cormorant Garamond',Georgia,serif}
+.eyebrow{
+  font-size:clamp(.66rem,2.4vw,.78rem);letter-spacing:.34em;text-transform:uppercase;
+  color:var(--gold);font-weight:500;
+}
+.divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:20px auto;max-width:320px}
+.divider::before,.divider::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--gold-soft),transparent)}
+.divider span{color:var(--gold);font-size:1rem;line-height:1}
+
+section{padding:clamp(58px,9vw,110px) 0;position:relative}
+.section-title{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:clamp(1.9rem,5.2vw,2.9rem);
+  color:var(--plum);text-align:center;font-weight:500;letter-spacing:.02em;
+}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* ---------- hero ---------- */
+.hero{
+  min-height:100svh;display:grid;place-items:center;text-align:center;
+  align-content:center;
+  padding:72px 22px 84px;position:relative;overflow:hidden;
+}
+.hero-inner{position:relative;z-index:2;max-width:760px}
+/* narrow: words first, framed portrait underneath - never text over faces */
+.hero-photo{
+  position:relative;z-index:2;width:min(100%,420px);margin:28px auto 0;
+  border-radius:20px;overflow:hidden;
+  border:1px solid rgba(184,137,63,.28);
+  box-shadow:0 20px 46px rgba(109,26,69,.16);
+}
+.hero-photo img{width:100%;max-height:40svh;object-fit:cover;object-position:center 14%}
+
+/* wide: poster layout - words on the left, couple on the right, nothing overlapping */
+@media(min-width:900px){
+  .hero{
+    place-items:center;text-align:left;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+    gap:clamp(24px,4vw,64px);
+    max-width:1180px;margin-inline:auto;padding:72px 34px 72px;
+  }
+  .hero-inner{max-width:none;justify-self:end;width:100%}
+  .hero-photo{
+    justify-self:start;width:100%;max-width:none;margin:0;border-radius:22px;
+    box-shadow:0 24px 60px rgba(109,26,69,.18);
+  }
+  .hero-photo img{max-height:64svh;object-fit:cover;object-position:center 18%}
+  .hero .divider{margin-inline:0}
+  .hero .scroll-cue{left:34px;transform:none;align-items:flex-start}
+  .hero .engagement{font-size:clamp(3rem,6.4vw,4.8rem)}
+  .names .n{font-size:clamp(2.8rem,6vw,4.4rem)}
+}
+/* short desktop windows: keep the whole hero above the fold */
+@media(min-width:900px) and (max-height:820px){
+  .hero{padding:48px 34px 56px}
+  .hero .engagement{font-size:clamp(2.6rem,5.2vw,3.6rem)}
+  .names{margin:12px 0 4px}
+  .names .n{font-size:clamp(2.4rem,4.8vw,3.4rem)}
+  .hero .divider{margin:12px 0}
+  .hero .when{margin-top:14px}
+  .hero-photo img{max-height:58svh}
+}
+.hero .welcome{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:clamp(1.5rem,6vw,2.4rem);letter-spacing:.3em;text-transform:uppercase;
+  color:var(--plum);font-weight:500;
+}
+.hero .to-our{
+  font-size:clamp(.7rem,2.6vw,.85rem);letter-spacing:.35em;text-transform:uppercase;
+  color:var(--ink-soft);margin-top:10px;
+}
+.hero .engagement{
+  font-family:'Great Vibes',cursive;
+  font-size:clamp(3.2rem,13vw,6rem);color:var(--plum);margin:2px 0 6px;
+}
+.names{margin:20px 0 6px}
+.names .n{
+  font-family:'Great Vibes',cursive;
+  font-size:clamp(3rem,12vw,5.6rem);color:var(--plum-deep);line-height:1.02;
+}
+.names .amp{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:clamp(1.6rem,5vw,2.4rem);color:var(--gold);margin:2px 0;
+}
+.hero .tagline{
+  font-size:clamp(.68rem,2.5vw,.8rem);letter-spacing:.28em;text-transform:uppercase;
+  color:var(--ink-soft);margin-top:14px;
+}
+.hero .when{
+  margin-top:22px;font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:clamp(1.05rem,3.6vw,1.4rem);color:var(--plum);letter-spacing:.06em;
+}
+.scroll-cue{
+  position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;
+  color:var(--gold);font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;
+  display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none;
+}
+.scroll-cue i{display:block;width:1px;height:38px;background:linear-gradient(var(--gold-soft),transparent);animation:cue 2.4s ease-in-out infinite}
+@keyframes cue{0%,100%{opacity:.3;transform:scaleY(.6)}50%{opacity:1;transform:scaleY(1)}}
+
+/* ---------- countdown ---------- */
+.countdown{display:flex;gap:clamp(10px,3vw,26px);justify-content:center;flex-wrap:wrap;margin-top:34px}
+.cd-box{
+  background:rgba(255,255,255,.72);border:1px solid rgba(184,137,63,.28);
+  border-radius:14px;padding:clamp(12px,3vw,20px) clamp(14px,4vw,28px);
+  min-width:clamp(70px,20vw,104px);backdrop-filter:blur(6px);box-shadow:var(--shadow);
+}
+.cd-num{
+  font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;
+  font-size:clamp(1.6rem,6vw,2.6rem);color:var(--plum);line-height:1;
+  font-variant-numeric:tabular-nums;
+}
+.cd-lbl{font-size:clamp(.55rem,2vw,.66rem);letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);margin-top:8px}
+#cd-done{display:none;font-family:'Great Vibes',cursive;font-size:clamp(2rem,7vw,3rem);color:var(--plum);margin-top:24px}
+
+/* ---------- story / details ---------- */
+.card{
+  background:rgba(255,255,255,.66);border:1px solid rgba(184,137,63,.22);
+  border-radius:18px;box-shadow:var(--shadow);backdrop-filter:blur(6px);
+}
+.details-grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));margin-top:42px}
+.detail{padding:34px 26px;text-align:center}
+.detail .icon{color:var(--gold);margin-bottom:16px;display:flex;justify-content:center}
+.detail .icon svg{width:34px;height:34px}
+.detail h3{
+  font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;
+  font-size:1.15rem;letter-spacing:.18em;text-transform:uppercase;color:var(--plum);margin-bottom:10px;
+}
+.detail p{font-size:.95rem;color:var(--ink)}
+.detail p.big{
+  font-family:'Cormorant Garamond',Georgia,serif;font-size:1.5rem;color:var(--plum-deep);font-weight:500;line-height:1.3;
+}
+
+/* ---------- portrait split ---------- */
+.split{display:grid;gap:clamp(26px,5vw,54px);grid-template-columns:1fr;align-items:center}
+@media(min-width:860px){.split{grid-template-columns:1.05fr .95fr}}
+.portrait{border-radius:20px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(184,137,63,.25)}
+.split .copy p{margin-bottom:16px;color:var(--ink-soft)}
+.split .copy p.lead{
+  font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(1.15rem,3vw,1.5rem);
+  color:var(--plum);line-height:1.55;
+}
+
+/* ---------- invitation ---------- */
+.invite-wrap{max-width:620px;margin:42px auto 0}
+.invite-wrap img{border-radius:16px;box-shadow:var(--shadow);border:1px solid rgba(184,137,63,.25)}
+
+/* ---------- buttons ---------- */
+.btn-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:34px}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:14px 30px;border-radius:999px;text-decoration:none;
+  font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;
+  background:var(--plum);color:#fff;border:1px solid var(--plum);
+  transition:transform .25s ease,box-shadow .25s ease,background .25s ease;
+  box-shadow:0 10px 26px rgba(109,26,69,.24);cursor:pointer;
+}
+.btn:hover{transform:translateY(-2px);background:var(--plum-deep);box-shadow:0 14px 32px rgba(109,26,69,.32)}
+.btn.ghost{background:transparent;color:var(--plum);border-color:var(--gold-soft);box-shadow:none}
+.btn.ghost:hover{background:rgba(184,137,63,.1)}
+
+/* ---------- map ---------- */
+.map-frame{
+  margin-top:38px;border-radius:18px;overflow:hidden;
+  box-shadow:var(--shadow);border:1px solid rgba(184,137,63,.25);
+  aspect-ratio:16/10;background:var(--cream-2);
+}
+@media(max-width:640px){.map-frame{aspect-ratio:4/5}}
+.map-frame iframe{width:100%;height:100%;border:0;display:block}
+.address{margin-top:22px;font-size:.9rem;color:var(--ink-soft);max-width:520px;margin-inline:auto}
+
+/* ---------- footer ---------- */
+footer{
+  text-align:center;padding:64px 22px 74px;
+  background:linear-gradient(180deg,transparent,rgba(109,26,69,.06));
+}
+footer .thanks{
+  font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(1.15rem,3.4vw,1.55rem);
+  color:var(--plum);max-width:520px;margin:0 auto;line-height:1.6;
+}
+footer .sig{font-family:'Great Vibes',cursive;font-size:clamp(2rem,7vw,3rem);color:var(--plum-deep);margin-top:22px}
+footer .fine{font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);margin-top:26px}
+
+/* ---------- floating petals ---------- */
+/* clipped fixed layer: keeps petals from widening the page / breaking compositing */
+#petals{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.petal{position:absolute;top:-10%;font-size:14px;opacity:.5;animation:fall linear infinite;will-change:transform}
+@keyframes fall{
+  0%{transform:translateY(0) rotate(0deg);opacity:0}
+  10%{opacity:.55}
+  100%{transform:translateY(120vh) rotate(420deg);opacity:0}
+}
+@media (prefers-reduced-motion:reduce){.petal{display:none}}
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <p class="welcome">Welcome</p>
+    <p class="to-our">to our</p>
+    <p class="engagement">Engagement</p>
+    <div class="divider"><span>&#10022;</span></div>
+    <div class="names">
+      <div class="n">Aswathy</div>
+      <div class="amp">&amp;</div>
+      <div class="n">Ananthu</div>
+    </div>
+    <p class="tagline">Celebrating love, forever &amp; always</p>
+    <p class="when">Sunday, 13<sup>th</sup> September 2026 &nbsp;·&nbsp; 11:00 AM</p>
+  </div>
+  <div class="hero-photo"><img src="assets/couple.jpg" alt="Aswathy and Ananthu" fetchpriority="high"></div>
+  <a class="scroll-cue" href="#countdown"><span>Scroll</span><i></i></a>
+</header>
+
+<!-- ===== COUNTDOWN ===== -->
+<section id="countdown">
+  <div class="wrap reveal" style="text-align:center">
+    <p class="eyebrow">Counting down to the day</p>
+    <h2 class="section-title">The Big Day Awaits</h2>
+    <div class="divider"><span>&#9829;</span></div>
+    <div class="countdown" id="cd">
+      <div class="cd-box"><div class="cd-num" id="cd-d">--</div><div class="cd-lbl">Days</div></div>
+      <div class="cd-box"><div class="cd-num" id="cd-h">--</div><div class="cd-lbl">Hours</div></div>
+      <div class="cd-box"><div class="cd-num" id="cd-m">--</div><div class="cd-lbl">Minutes</div></div>
+      <div class="cd-box"><div class="cd-num" id="cd-s">--</div><div class="cd-lbl">Seconds</div></div>
+    </div>
+    <p id="cd-done">Happily Engaged &#10084;</p>
+  </div>
+</section>
+
+<!-- ===== COUPLE / STORY ===== -->
+<section id="couple">
+  <div class="wrap split reveal">
+    <div class="portrait"><img src="assets/welcome.jpg" alt="Welcome to our engagement - Aswathy and Ananthu" loading="lazy"></div>
+    <div class="copy">
+      <p class="eyebrow">Together with our families</p>
+      <h2 class="section-title" style="text-align:left;margin:10px 0 18px">Aswathy &amp; Ananthu</h2>
+      <p class="lead">Two families, one happy beginning.</p>
+      <p>We cordially invite you to celebrate our engagement — a morning of blessings, laughter and good food with the people we love most.</p>
+      <p>Your presence will make our special day even more memorable.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DETAILS ===== -->
+<section id="details">
+  <div class="wrap reveal" style="text-align:center">
+    <p class="eyebrow">Save the date</p>
+    <h2 class="section-title">Event Details</h2>
+    <div class="divider"><span>&#9829;</span></div>
+    <div class="details-grid">
+      <div class="card detail">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/><circle cx="8.5" cy="14.5" r=".9" fill="currentColor" stroke="none"/><circle cx="12" cy="14.5" r=".9" fill="currentColor" stroke="none"/><circle cx="15.5" cy="14.5" r=".9" fill="currentColor" stroke="none"/></svg></div>
+        <h3>Date</h3>
+        <p class="big">13<sup>th</sup> September 2026</p>
+        <p>Sunday</p>
+      </div>
+      <div class="card detail">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 6.8V12l3.4 2.2"/></svg></div>
+        <h3>Time</h3>
+        <p class="big">11:00 AM</p>
+        <p>Onwards</p>
+      </div>
+      <div class="card detail">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.5s7-6.1 7-11.1a7 7 0 1 0-14 0c0 5 7 11.1 7 11.1Z"/><circle cx="12" cy="10.2" r="2.6"/></svg></div>
+        <h3>Venue</h3>
+        <p class="big">Thuruthi Temple Hall</p>
+        <p>Maradu, Kochi, Kerala</p>
+      </div>
+    </div>
+    <div class="btn-row">
+      <a class="btn" id="gcal" href="#" target="_blank" rel="noopener">Add to Google Calendar</a>
+      <a class="btn ghost" id="ics" href="#" download="aswathy-ananthu-engagement.ics">Download .ics</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INVITATION CARD ===== -->
+<section id="invitation">
+  <div class="wrap reveal" style="text-align:center">
+    <p class="eyebrow">Our invitation</p>
+    <h2 class="section-title">With Love, To You</h2>
+    <div class="divider"><span>&#10022;</span></div>
+    <div class="invite-wrap">
+      <img src="assets/invitation.jpg" alt="Engagement invitation card for Aswathy and Ananthu" loading="lazy">
+    </div>
+    <div class="btn-row">
+      <a class="btn ghost" href="assets/invitation.jpg" target="_blank" rel="noopener">View Full Card</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LOCATION ===== -->
+<section id="location">
+  <div class="wrap reveal" style="text-align:center">
+    <p class="eyebrow">Find your way</p>
+    <h2 class="section-title">Thuruthi Temple Hall, Maradu</h2>
+    <div class="divider"><span>&#10022;</span></div>
+    <div class="map-frame">
+      <iframe
+        title="Map to Thuruthi Temple Hall, Maradu"
+        src="https://maps.google.com/maps?q=9.9518635,76.325987&z=16&hl=en&output=embed"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+    <p class="address">Thuruthi Temple Rd, Upasana Nagar, Maradu, Ernakulam, Kochi, Kerala 682304</p>
+    <div class="btn-row">
+      <a class="btn" href="https://maps.app.goo.gl/PJigbm9UKdm1ovZv9" target="_blank" rel="noopener">Open in Google Maps</a>
+      <a class="btn ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=9.9518635%2C76.325987" target="_blank" rel="noopener">Get Directions</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="divider"><span>&#9829;</span></div>
+  <p class="thanks">Your presence will make our special day even more memorable.</p>
+  <p class="sig">Aswathy &amp; Ananthu</p>
+  <p class="fine">13 . 09 . 2026 &nbsp;·&nbsp; Maradu, Kerala</p>
+</footer>
+
+<script>
+(function(){
+  /* ---- countdown: 13 Sep 2026, 11:00 IST (UTC+5:30) ---- */
+  var target = new Date('2026-09-13T11:00:00+05:30').getTime();
+  var d=document.getElementById('cd-d'),h=document.getElementById('cd-h'),
+      m=document.getElementById('cd-m'),s=document.getElementById('cd-s'),
+      box=document.getElementById('cd'),done=document.getElementById('cd-done');
+  function pad(n){return n<10?'0'+n:''+n;}
+  function tick(){
+    var gap = target - Date.now();
+    if(gap <= 0){ box.style.display='none'; done.style.display='block'; clearInterval(t); return; }
+    var day=Math.floor(gap/86400000);
+    d.textContent = day;
+    h.textContent = pad(Math.floor(gap/3600000)%24);
+    m.textContent = pad(Math.floor(gap/60000)%60);
+    s.textContent = pad(Math.floor(gap/1000)%60);
+  }
+  tick(); var t=setInterval(tick,1000);
+
+  /* ---- calendar links ---- */
+  var startUTC='20260913T053000Z', endUTC='20260913T083000Z';
+  var title='Engagement of Aswathy & Ananthu';
+  var loc='Thuruthi Temple Hall, Maradu, Kochi, Kerala';
+  var desc='Join us to celebrate the engagement of Aswathy & Ananthu.';
+  document.getElementById('gcal').href =
+    'https://calendar.google.com/calendar/render?action=TEMPLATE'
+    + '&text=' + encodeURIComponent(title)
+    + '&dates=' + startUTC + '/' + endUTC
+    + '&details=' + encodeURIComponent(desc)
+    + '&location=' + encodeURIComponent(loc);
+
+  var ics = [
+    'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//aswathy-ananthu//engagement//EN',
+    'BEGIN:VEVENT','UID:engagement-aswathy-ananthu-2026@github.io',
+    'DTSTAMP:' + startUTC,'DTSTART:' + startUTC,'DTEND:' + endUTC,
+    'SUMMARY:' + title,'LOCATION:' + loc,'DESCRIPTION:' + desc,
+    'END:VEVENT','END:VCALENDAR'
+  ].join('\r\n');
+  document.getElementById('ics').href =
+    'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics);
+
+  /* ---- scroll reveal ---- */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  /* ---- floating petals ---- */
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var glyphs=['\u2740','\u273F','\u2766','\u2665'];
+    var tints=['#C2537E','#A9709E','#D9B778','#D98BA6'];
+    var layer=document.createElement('div');
+    layer.id='petals';
+    layer.setAttribute('aria-hidden','true');
+    for(var i=0;i<14;i++){
+      var p=document.createElement('span');
+      p.className='petal';
+      p.textContent=glyphs[i%glyphs.length];
+      p.style.left=(2+Math.random()*94)+'%';
+      p.style.color=tints[i%tints.length];
+      p.style.fontSize=(10+Math.random()*14)+'px';
+      p.style.animationDuration=(13+Math.random()*14)+'s';
+      p.style.animationDelay=(-Math.random()*20)+'s';
+      layer.appendChild(p);
+    }
+    document.body.appendChild(layer);
+  }
+})();
+</script>
+</body>
+</html>
