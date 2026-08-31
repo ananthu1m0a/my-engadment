@@ -28,7 +28,12 @@ git push -u origin main
 ```
 Then: repo **Settings → Pages → Source: Deploy from a branch → main / (root) → Save**.
 
-Live at `https://<user>.github.io/<repo>/` in ~1 minute.
+Live at https://ananthu1m0a.github.io/my-engadment/ in ~1 minute.
+
+## Link previews
+`og:image` / `og:url` in `index.html` are **absolute** URLs — WhatsApp, Facebook and
+Twitter ignore relative ones. If the repo is renamed or moved to a custom domain,
+update the four `https://ananthu1m0a.github.io/my-engadment/` references in `<head>`.
 
 ## Editing
 Date, time, venue live in `index.html` — search for `13` / `11:00 AM` / `Thuruthi`.
